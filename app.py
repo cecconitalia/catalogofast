@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
+import os
+
+print(os.urandom(24))  # Gera uma chave secreta de 24 bytes
+
 
 app = Flask(__name__)
-app.secret_key = 'sua_chave_secreta'  # Necessária para usar flash messages
+app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'default_secret_key')
 
 # Configuração do Flask-Mail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -47,3 +51,4 @@ def send_email():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
