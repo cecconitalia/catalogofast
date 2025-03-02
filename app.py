@@ -12,7 +12,7 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'default_secret_key')
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'ofertacobrasilsc@gmail.com'        # Substitua pelo seu email
+app.config['MAIL_USERNAME'] = 'cecconitalia@gmail.com'        # Substitua pelo seu email
 app.config['MAIL_PASSWORD'] = 'D8h5..12'                    # Substitua pela sua senha ou utilize variáveis de ambiente
 
 mail = Mail(app)

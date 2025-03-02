@@ -8,121 +8,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">Catalogo Fast</a>
-      <!-- Ícone para o menu responsivo -->
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#como-funciona">Como Funciona</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <!-- Seção Hero -->
-  <header id="home" class="hero">
-    <div class="container">
-      <h1>Seu Catálogo Online em Poucos Cliques</h1>
-      <p>Com o Catalogo Fast, os produtos já cadastrados no Bling ganham vida em uma vitrine digital moderna e atrativa. Transforme seu negócio e aumente suas vendas!</p>
-      <a href="#como-funciona" class="btn">Saiba Mais</a>
-    </div>
-  </header>
-  
-  <!-- Seção Como Funciona -->
-  <section id="como-funciona" class="how-it-works">
-    <div class="container">
-      <h2>Como Funciona?</h2>
-      <p>É simples! Nossa plataforma se integra automaticamente ao Bling para sincronizar seus produtos. Em poucos minutos, seu catálogo online estará disponível para seus clientes, com um design intuitivo e responsivo.</p>
-      <p>Não perca tempo com atualizações manuais – concentre-se em expandir seu negócio enquanto cuidamos da parte digital para você.</p>
-    </div>
-  </section>
-  
-  <!-- Seção Produtos -->
-  <section id="produtos" class="products">
-    <div class="container">
-      <h2>Passo a passo</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="/static/images/passo1.png" alt="Passo 1 - Cadastro">
-          <h3>Passo 1 - Cadastro</h3>
-          <p>Cadastre seus produtos no Bling.</p>
+    <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">Catalogo Fast</a>
+          <div id="mobile-menu" class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
         </div>
-        <div class="product-card">
-          <img src="/static/images/catalogo001.png" alt="Produtos Online">
-          <h3>Pronto! Seus produtos estão Online</h3>
-          <p>Seus produtos são atualizados de forma automática e instantânea em seu catálogo online.</p>
-        </div>
-        <div class="product-card">
-          <img src="/static/images/catalogo002.png" alt="Pesquise">
-          <h3>Pesquise!</h3>
-          <p>Pesquise com facilidade e encontre exatamente o que precisa em segundos!</p>
-        </div>
-        <div class="product-card">
-          <img src="/static/images/catalogo004.jpg" alt="Design Responsivo">
-          <h3>Design Responsivo!</h3>
-          <p>Seu catálogo em qualquer tela! Design responsivo para uma experiência perfeita no celular, tablet ou computador.</p>
-        </div>
-        <div class="product-card">
-          <img src="/static/images/catalogo005.jpg" alt="Especificações">
-          <h3>Especificações</h3>
-          <p>Detalhes que fazem a diferença! Veja todas as informações do produto para escolher com confiança.</p>
-        </div>
-        <div class="product-card">
-          <img src="/static/images/catalogo006.jpg" alt="Imagens">
-          <h3>Imagens</h3>
-          <p>Veja cada detalhe! Imagens nítidas para você conhecer seu produto antes de comprar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Seção Sobre Nós -->
-  <section id="sobre" class="about">
-    <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>No Catalogo Fast, acreditamos que sua vitrine online deve ser tão dinâmica quanto o seu negócio. Nossa missão é facilitar a exibição dos produtos cadastrados no Bling, proporcionando uma experiência de navegação rápida, moderna e que encanta seus clientes.</p>
-    </div>
-  </section>
-  
-  <!-- Seção Contato -->
-  <section id="contato" class="contact">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <p>Tem alguma dúvida ou quer saber mais sobre como transformar seu catálogo online? Fale conosco!</p>
-      <form action="/send" method="POST">
-        <input type="text" name="name" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu email" required>
-        <input type="text" name="whatsapp" placeholder="Seu Whatsapp" required>
-        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- Rodapé -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Catalogo Fast. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-  
-  <!-- Script para o menu responsivo -->
-  <script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const menu = document.querySelector('.menu');
+    </nav>
     
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+    <!-- Seção Hero -->
+    <header id="home" class="hero">
+      <div class="container">
+        <h1>Seu Catálogo Online em Poucos Cliques</h1>
+        <p>Com o Catalogo Fast, os produtos já cadastrados no Bling ganham vida em uma vitrine digital moderna e atrativa. Transforme seu negócio e aumente suas vendas!</p>
+        <a href="#como-funciona" class="btn">Saiba Mais</a>
+      </div>
+    </header>
+    
+    <!-- Seção Como Funciona -->
+    <section id="como-funciona" class="how-it-works">
+      <div class="container">
+        <h2>Como Funciona?</h2>
+        <p>É simples! Nossa plataforma se integra automaticamente ao Bling para sincronizar seus produtos. Em poucos minutos, seu catálogo online estará disponível para seus clientes, com um design intuitivo e responsivo.</p>
+        <p>Não perca tempo com atualizações manuais – concentre-se em expandir seu negócio enquanto cuidamos da parte digital para você.</p>
+      </div>
+    </section>
+    
+    <!-- Seção Produtos -->
+    <section id="produtos" class="products">
+      <div class="container">
+        <h2>Passo a Passo</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="/static/images/passo1.png" alt="Passo 1 - Cadastro">
+            <h3>Passo 1 - Cadastro</h3>
+            <p>Cadastre seus produtos no Bling.</p>
+          </div>
+          <div class="product-card">
+            <img src="/static/images/catalogo001.png" alt="Produtos Online">
+            <h3>Pronto! Seus produtos estão Online</h3>
+            <p>Seus produtos são atualizados de forma automática e instantânea em seu catálogo online.</p>
+          </div>
+          <div class="product-card">
+            <img src="/static/images/catalogo002.png" alt="Pesquise">
+            <h3>Pesquise!</h3>
+            <p>Pesquise com facilidade e encontre exatamente o que precisa em segundos!</p>
+          </div>
+          <div class="product-card">
+            <img src="/static/images/catalogo004.jpg" alt="Design Responsivo">
+            <h3>Design Responsivo!</h3>
+            <p>Seu catálogo em qualquer tela! Design responsivo para uma experiência perfeita no celular, tablet ou computador.</p>
+          </div>
+          <div class="product-card">
+            <img src="/static/images/catalogo005.jpg" alt="Especificações">
+            <h3>Especificações</h3>
+            <p>Detalhes que fazem a diferença! Veja todas as informações do produto para escolher com confiança.</p>
+          </div>
+          <div class="product-card">
+            <img src="/static/images/catalogo006.jpg" alt="Imagens">
+            <h3>Imagens</h3>
+            <p>Veja cada detalhe! Imagens nítidas para você conhecer seu produto antes de comprar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>No Catalogo Fast, acreditamos que sua vitrine online deve ser tão dinâmica quanto o seu negócio. Nossa missão é facilitar a exibição dos produtos cadastrados no Bling, proporcionando uma experiência de navegação rápida, moderna e que encanta seus clientes.</p>
+      </div>
+    </section>
+    
+    <!-- Seção Contato -->
+    <section id="contato" class="contact">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Tem alguma dúvida ou quer saber mais sobre como transformar seu catálogo online? Fale conosco!</p>
+        <form action="/send" method="POST">
+          <input type="text" name="name" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu email" required>
+          <input type="text" name="whatsapp" placeholder="Seu Whatsapp" required>
+          <textarea name="message" placeholder="Sua mensagem" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Catalogo Fast. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Script para o menu responsivo -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.getElementById('mobile-menu');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+          menu.classList.toggle('active');
+        });
+      });
+    </script>
+
 </body>
 </html>
