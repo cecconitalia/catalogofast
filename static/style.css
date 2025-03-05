@@ -1,264 +1,303 @@
 /* Estilos gerais */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar .logo {
-    font-size: 1.8rem;
-    color: white;
-    text-decoration: none;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* Ícone ativo (transforma em X) */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Seção Hero */
+.hero {
+  background: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.hero .btn {
+  padding: 12px 24px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+/* Seção Como Funciona */
+.how-it-works {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.how-it-works p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Seção Produtos */
+.products {
+  padding: 60px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.product-card p {
+  color: #666;
+}
+
+/* Seção Sobre Nós */
+.about {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Seção Contato */
+.contact {
+  padding: 60px 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Menu Responsivo para Mobile */
+@media screen and (max-width: 768px) {
   .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-left: 20px;
-  }
-  
-  .menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .menu-toggle {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .bar {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-  }
-  
-  /* Seção Hero */
-  .hero {
-    background: #f8f8f8;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    color: #666;
-    margin: 20px 0;
-  }
-  
-  .hero .btn {
-    padding: 12px 24px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-  }
-  
-  /* Seção Como Funciona */
-  .how-it-works {
-    padding: 60px 20px;
-    background-color: #f8f8f8;
-    text-align: center;
-  }
-  
-  .how-it-works h2 {
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .how-it-works p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Seção Produtos */
-  .products {
-    padding: 60px 20px;
-  }
-  
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 produtos por linha */
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .product-card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-  }
-  
-  .product-card h3 {
-    font-size: 1.4rem;
-    color: #333;
-  }
-  
-  .product-card p {
-    color: #666;
-  }
-  
-  /* Seção Sobre Nós */
-  .about {
-    padding: 60px 20px;
-    background-color: #f8f8f8;
-    text-align: center;
-  }
-  
-  .about h2 {
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .about p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Seção Contato */
-  .contact {
-    padding: 60px 20px;
-  }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact input, .contact textarea {
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .contact button {
-    padding: 12px;
-    font-size: 1.1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  /* Menu Responsivo */
-  @media screen and (max-width: 768px) {
-    .menu {
-      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
       align-items: flex-start;
-    }
-  
-    .menu.active {
-      display: flex;
-    }
-  
-    .menu li {
-      margin-left: 0;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha em telas médias */
-    }
+      padding-top: 60px;
+      transition: right 0.3s ease;
+      z-index: 999;
   }
-  
-  @media screen and (max-width: 480px) {
-    .hero h1 {
+  .menu.active {
+      right: 0;
+  }
+  .menu li {
+      width: 100%;
+      padding: 15px 20px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+      margin: 0;
+  }
+  .menu li a {
+      font-size: 1.2rem;
+  }
+  .menu-toggle {
+      display: block;
+      z-index: 1000;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 480px) {
+  .hero h1 {
       font-size: 2rem;
-    }
-  
-    .hero p {
+  }
+  .hero p {
       font-size: 1rem;
-    }
-  
-    .hero .btn {
+  }
+  .hero .btn {
       padding: 10px 20px;
       font-size: 1rem;
-    }
-  
-    .how-it-works h2, .about h2 {
-      font-size: 1.8rem;
-    }
-  
-    .how-it-works p, .about p {
-      font-size: 1rem;
-    }
-  
-    .product-card h3 {
-      font-size: 1.2rem;
-    }
-  
-    .product-card p {
-      font-size: 1rem;
-    }
-  
-    .product-grid {
-      grid-template-columns: 1fr; /* 1 produto por linha em telas pequenas */
-    }
   }
-  
+  .how-it-works h2, .about h2 {
+      font-size: 1.8rem;
+  }
+  .how-it-works p, .about p {
+      font-size: 1rem;
+  }
+  .product-card h3 {
+      font-size: 1.2rem;
+  }
+  .product-card p {
+      font-size: 1rem;
+  }
+  .product-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Ajuste para imagens verticais (screenshots de celular) */
+.product-card.vertical img {
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+.whatsapp-button:hover {
+  background-color: #128C7E;
+}

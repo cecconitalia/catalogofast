@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalogo Fast</title>
+  <title>Catálogo Fast</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-          <a href="#" class="logo">Catalogo Fast</a>
+          <a href="#" class="logo">Catálogo Fast</a>
           <div id="mobile-menu" class="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -30,7 +30,7 @@
     <header id="home" class="hero">
       <div class="container">
         <h1>Seu Catálogo Online em Poucos Cliques</h1>
-        <p>Com o Catalogo Fast, os produtos já cadastrados no Bling ganham vida em uma vitrine digital moderna e atrativa. Transforme seu negócio e aumente suas vendas!</p>
+        <p>Com o Catálogo Fast, os produtos já cadastrados no Bling ganham vida em uma vitrine digital moderna e atrativa. Transforme seu negócio e aumente suas vendas!</p>
         <a href="#como-funciona" class="btn">Saiba Mais</a>
       </div>
     </header>
@@ -64,17 +64,18 @@
             <h3>Pesquise!</h3>
             <p>Pesquise com facilidade e encontre exatamente o que precisa em segundos!</p>
           </div>
-          <div class="product-card">
+          <!-- Últimas 3 imagens com orientação vertical -->
+          <div class="product-card vertical">
             <img src="/static/images/catalogo004.jpg" alt="Design Responsivo">
             <h3>Design Responsivo!</h3>
             <p>Seu catálogo em qualquer tela! Design responsivo para uma experiência perfeita no celular, tablet ou computador.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card vertical">
             <img src="/static/images/catalogo005.jpg" alt="Especificações">
             <h3>Especificações</h3>
             <p>Detalhes que fazem a diferença! Veja todas as informações do produto para escolher com confiança.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card vertical">
             <img src="/static/images/catalogo006.jpg" alt="Imagens">
             <h3>Imagens</h3>
             <p>Veja cada detalhe! Imagens nítidas para você conhecer seu produto antes de comprar.</p>
@@ -87,29 +88,31 @@
     <section id="sobre" class="about">
       <div class="container">
         <h2>Sobre Nós</h2>
-        <p>No Catalogo Fast, acreditamos que sua vitrine online deve ser tão dinâmica quanto o seu negócio. Nossa missão é facilitar a exibição dos produtos cadastrados no Bling, proporcionando uma experiência de navegação rápida, moderna e que encanta seus clientes.</p>
+        <p>No Catálogo Fast, acreditamos que sua vitrine online deve ser tão dinâmica quanto o seu negócio. Nossa missão é facilitar a exibição dos produtos cadastrados no Bling, proporcionando uma experiência de navegação rápida, moderna e que encanta seus clientes.</p>
       </div>
     </section>
     
-    <!-- Seção Contato -->
-    <section id="contato" class="contact">
-      <div class="container">
-        <h2>Entre em Contato</h2>
-        <p>Tem alguma dúvida ou quer saber mais sobre como transformar seu catálogo online? Fale conosco!</p>
-        <form action="/send" method="POST">
-          <input type="text" name="name" placeholder="Seu nome" required>
-          <input type="email" name="email" placeholder="Seu email" required>
-          <input type="text" name="whatsapp" placeholder="Seu Whatsapp" required>
-          <textarea name="message" placeholder="Sua mensagem" required></textarea>
-          <button type="submit" class="btn">Enviar</button>
-        </form>
-      </div>
-    </section>
+<!-- Seção Contato -->
+<section id="contato" class="contact">
+  <div class="container">
+    <h2>Estamos Aqui para Ajudar!</h2>
+    <p>Tem alguma dúvida ou deseja saber mais sobre como transformar seu catálogo online? Nossa equipe está pronta para auxiliá-lo a alcançar o sucesso!</p>
+    <p>Para uma comunicação rápida e direta, entre em contato conosco pelo WhatsApp:</p>
+    <a href="https://wa.me/5511968126748?text=Olá,%20gostaria%20de%20mais%20informações." class="whatsapp-button" target="_blank">
+      <img src="/static/images/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+      Enviar Mensagem no WhatsApp
+    </a>
+  </div>
+</section>
+
+
+
+
     
     <!-- Rodapé -->
     <footer>
       <div class="container">
-        <p>&copy; 2025 Catalogo Fast. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Catálogo Fast. Todos os direitos reservados.</p>
       </div>
     </footer>
 
@@ -121,6 +124,25 @@
 
         menuToggle.addEventListener('click', () => {
           menu.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+
+        // Fechar o menu ao clicar em um link
+        document.querySelectorAll('.menu li a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (menu.classList.contains('active')) {
+              menu.classList.remove('active');
+              menuToggle.classList.remove('active');
+            }
+          });
+        });
+
+        // Opcional: remover classe active ao redimensionar para telas maiores
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 768) {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
         });
       });
     </script>
